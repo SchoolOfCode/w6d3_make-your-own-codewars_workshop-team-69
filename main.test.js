@@ -20,7 +20,7 @@ output - [ 1, 2, 5, 10 ]
 expect(). [ 1, 2, 5, 10 ]
 */
 
-
+import multiples from "./main.js";
 
 describe('test multiples func', () => {
 
@@ -28,10 +28,9 @@ describe('test multiples func', () => {
 
         const num = 10;
         const expected = [ 1, 2, 5, 10 ];
-    
         const actual = multiples(num);
     
-        expected(actual).toStrictEqual(expected);
+        expect(actual).toEqual(expected);
     
     })
 
