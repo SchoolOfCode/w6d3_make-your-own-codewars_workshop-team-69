@@ -15,19 +15,5 @@ factors(10) returns [1, 2, 5, 10]
 
 //👉 Write the function your CodeWarriors will start with below here:
 export default function factors(number) {
-    if (number === 0) {
-        return '0 is not divisible';
-    }
-    let multipleArr = [];
-    number = Math.abs(number)
-    for (let i = 1; i <= number; i++) {
-        console.log(number, i);
-        if (number % i === 0) {
-            multipleArr.push(i)
-        }
-    }
-    multipleArr.sort((a,b) => b-a);
-    multipleArr.sort((a,b) => a-b);
 
-    return multipleArr;
 }
