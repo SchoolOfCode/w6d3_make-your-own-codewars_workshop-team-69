@@ -1,24 +1,32 @@
 /* 
 👉 Write your kata here!
 
-//make a function
-//that takes in a number
-//and returns an array of all of it's multiples 
-    //the array is in ascending order
+Write a function that takes a number as an argument and returns a sorted (ascending) array of the number's factors (a factor is a number that divides another number or expression evenly with no remainders).
 
-input - 10
-output - [ 1, 2, 5, 10 ]
+If the argument is 0, return the following string: '0 is not divisible'.
+If a negative number is passed as an argument, convert it to a positive number.
+TIP: Do not hesitate to google Array.sort if you need help with sorting numbers in ascending order.
+
+
+For example:
+factors(10) returns [1, 2, 5, 10]
 
 */
 
 //👉 Write the function your CodeWarriors will start with below here:
-export default function multiples(number) {
+export default function factors(number) {
+    if (number === 0) {
+        return '0 is not divisible';
+    }
     let multipleArr = [];
-    for (let i = 1; i === number; i++) {
+    number = Math.abs(number)
+    for (let i = 1; i <= number; i++) {
+        console.log(number, i);
         if (number % i === 0) {
             multipleArr.push(i)
         }
     }
-    multipleArr = multipleArr.sort((a,b) => a-b);
+    multipleArr.sort((a,b) => a-b);
+
     return multipleArr;
 }
