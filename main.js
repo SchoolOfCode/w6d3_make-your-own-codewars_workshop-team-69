@@ -26,6 +26,7 @@ export default function factors(number) {
             multipleArr.push(i)
         }
     }
+    multipleArr.sort((a,b) => b-a);
     multipleArr.sort((a,b) => a-b);
 
     return multipleArr;
